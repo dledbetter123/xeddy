@@ -14,21 +14,10 @@ package models
 
 import "time"
 
-type WeekDay int
-
-const (
-	Sunday WeekDay = iota
-	Monday
-	Tuesday
-	Wednesday
-	Thursday
-	Friday
-	Saturday
-)
-
+// Use string instead of custom WeekDay type for Firestore compatibility
 type TimeObject struct {
-	Open  time.Time
-	Close time.Time
+	Open  string
+	Close string
 }
 
 type Item struct {
@@ -50,7 +39,6 @@ type Review struct {
 	Text   string
 }
 
-// Restaurant represents a restaurant structure
 type Restaurant struct {
 	ID               int64
 	Name             string
@@ -63,11 +51,11 @@ type Restaurant struct {
 	Email            string
 	Phone            string
 	OddDates         []time.Time
-	Hours            map[WeekDay]TimeObject
+	Hours            map[string]TimeObject // Use string instead of WeekDay
 	Closed           bool
 	Menu             []Item
 	Rewards          []int64
 	Deals            []Deal
-	OrderSystems     []string // 'Toast', 'Square', whatever
+	OrderSystems     []string
 	Reviews          []Review
 }
