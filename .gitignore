@@ -1,2 +1,4 @@
 xeddy-backend/*.json
 xeddy-backend/go.sum
+xeddy-backend/internal/db/xeddy_firebase_credentials.json
+xeddy-backend/.env
