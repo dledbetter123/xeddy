@@ -3,8 +3,11 @@ package square
 import (
 	"bytes"
 	"encoding/json"
+	"log"
 	"net/http"
 	"os"
+
+	"github.com/joho/godotenv"
 )
 
 // func InitializeAuth() {
@@ -19,10 +22,18 @@ type TokenResponse struct {
 }
 
 func ExchangeCodeForToken(code string) (*TokenResponse, error) {
+	err := godotenv.Load() // Looks for a .env file in the project root
+	if err != nil {
+		log.Printf("Error loading .env file: %v", err)
+	}
 	clientID := os.Getenv("SQUARE_APPLICATION_ID")
 	clientSecret := os.Getenv("SQUARE_CLIENT_SECRET")
-	redirectURI := os.Getenv("SQUARE_SANDBOX_REDIRECT_URL")
-
+	var redirectURI string = ""
+	if os.Getenv("DEPLOY_TYPE") == "SANDBOX" || os.Getenv("DEPLOY_TYPE") == "DEV" {
+		redirectURI = os.Getenv("SQUARE_SANDBOX_REDIRECT_URL")
+	} else {
+		redirectURI = os.Getenv("SQUARE_REDIRECT_URL")
+	}
 	url := "https://connect.squareup.com/oauth2/token"
 
 	body := map[string]string{

@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 
@@ -84,11 +85,16 @@ func OAuthCallbackHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("OAuth successful! Token has been stored."))
 }
 
+func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Backend Operational")
+}
+
 func SetupRoutes(app *App) *mux.Router {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/add-restaurant", app.AddRestaurantHandler).Methods("POST")
 	router.HandleFunc("/restaurants", app.GetRestaurantsHandler).Methods("GET")
+	router.HandleFunc("/", HealthCheckHandler).Methods("GET")
 	router.HandleFunc("/oauth/callback", OAuthCallbackHandler)
 	return router
 }
