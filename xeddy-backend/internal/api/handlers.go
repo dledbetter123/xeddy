@@ -9,6 +9,7 @@ import (
 	"cloud.google.com/go/firestore"
 	"github.com/dledbetter123/xeddy/internal/db"
 	"github.com/dledbetter123/xeddy/internal/models"
+	"github.com/dledbetter123/xeddy/internal/session"
 	"github.com/dledbetter123/xeddy/internal/square"
 	"github.com/gorilla/mux"
 )
@@ -52,14 +53,36 @@ func (app *App) GetRestaurantsHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(restaurants)
 }
 
+// OAuthStartHandler initiates the Square OAuth flow by redirecting to the auth URL
+func OAuthStartHandler(w http.ResponseWriter, r *http.Request) {
+	authURL, err := square.GenerateAuthURL(w, r)
+	if err != nil {
+		http.Error(w, "Failed to generate auth URL", http.StatusInternalServerError)
+		log.Printf("Error generating auth URL: %v", err)
+		return
+	}
+
+	http.Redirect(w, r, authURL, http.StatusFound)
+}
+
 func OAuthCallbackHandler(w http.ResponseWriter, r *http.Request) {
+	// csrf protection added
+	session, _ := session.Store.Get(r, "auth-session")
+	savedState, _ := session.Values["auth_state"].(string)
+	receivedState := r.URL.Query().Get("state")
+
+	if savedState == "" || receivedState != savedState {
+		http.Error(w, "Invalid state parameter", http.StatusBadRequest)
+		log.Println("CSRF protection: state mismatch")
+		return
+	}
 
 	code := r.URL.Query().Get("code")
 	if code == "" {
 		http.Error(w, "Authorization code not provided", http.StatusBadRequest)
 		return
 	}
-
+	log.Printf("Auth Code: %s", code)
 	tokenResp, err := square.ExchangeCodeForToken(code)
 	if err != nil {
 		http.Error(w, "Failed to exchange token: "+err.Error(), http.StatusInternalServerError)
@@ -96,5 +119,6 @@ func SetupRoutes(app *App) *mux.Router {
 	router.HandleFunc("/restaurants", app.GetRestaurantsHandler).Methods("GET")
 	router.HandleFunc("/", HealthCheckHandler).Methods("GET")
 	router.HandleFunc("/oauth/callback", OAuthCallbackHandler)
+	router.HandleFunc("/oauth/start", OAuthStartHandler).Methods("GET")
 	return router
 }
