@@ -1,0 +1,23 @@
+platform :ios, '17.5' # Ensure the platform version is specified at the top
+ENV['SWIFT_VERSION'] = '5.6'
+
+target 'xeddy-ios' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+ 
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+
+  target 'xeddy-iosTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'xeddy-iosUITests' do
+    inherit! :search_paths
+    # Pods for UI testing
+  end
+
+end

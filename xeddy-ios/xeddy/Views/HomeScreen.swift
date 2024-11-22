@@ -1,22 +1,17 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    
-    // placeholder for restaurants
-    let restaurants = [
-        Restaurant(name: "Local Pizza", points: 100, image: "pizza", hasDeal: true),
-        Restaurant(name: "Sushi Spot", points: 50, image: "sushi", hasDeal: false),
-        Restaurant(name: "Burger Barn", points: 120, image: "burger", hasDeal: true)
-    ]
-    
+    @StateObject private var viewModel = RestaurantViewModel() // Use the view model to fetch real data
+
     var body: some View {
         NavigationView {
             VStack {
                 Text("Restaurants")
-                    .font(.system(size: 34, weight: .bold, design: .default)) // Combines size and weight
-                    .foregroundColor(.umbcGold)
+                    .font(.system(size: 34, weight: .bold, design: .default))
+                    .foregroundColor(.yellow) // Replace with `.umbcGold` if using a custom color
+                
                 ScrollView {
-                    ForEach(restaurants) { restaurant in
+                    ForEach(viewModel.restaurants) { restaurant in
                         NavigationLink(destination: RestaurantDetailScreen(restaurant: restaurant)) {
                             RestaurantCard(restaurant: restaurant)
                         }
@@ -24,10 +19,20 @@ struct HomeScreen: View {
                     }
                 }
                 .padding(.horizontal)
+                .refreshable { // Add pull-to-refresh here
+                    viewModel.fetchRestaurants()
+                }
             }
-            .navigationBarHidden(true) // Hide default navigation bar
+            .navigationBarHidden(true)
             .background(Color.black)
         }
+        .onAppear {
+            if viewModel.restaurants.isEmpty {
+                viewModel.fetchRestaurants() // Fetch restaurants when the view appears
+            }
+        }
     }
-    
+}
+#Preview {
+    HomeScreen()
 }

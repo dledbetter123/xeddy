@@ -1,6 +1,7 @@
 package api
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -112,6 +113,40 @@ func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Backend Operational")
 }
 
+func GetMenuItemsHandler(w http.ResponseWriter, r *http.Request) {
+	// Get merchant ID from query parameter
+	merchantID := r.URL.Query().Get("merchant_id")
+	if merchantID == "" {
+		http.Error(w, "merchant_id is required", http.StatusBadRequest)
+		return
+	}
+
+	// Initialize Firestore client
+	firestoreClient, err := db.InitializeFirestore()
+	if err != nil {
+		http.Error(w, "Failed to initialize Firestore: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	defer firestoreClient.Close()
+
+	// Fetch menu items from Square
+	ctx := context.Background()
+	menuItems, err := square.GetMenuItems(ctx, firestoreClient, merchantID)
+	if err != nil {
+		http.Error(w, "Failed to retrieve menu items: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Send menu items as JSON response
+	responseData, err := json.Marshal(menuItems)
+	if err != nil {
+		http.Error(w, "Failed to encode menu items to JSON: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(responseData)
+}
+
 func SetupRoutes(app *App) *mux.Router {
 	router := mux.NewRouter()
 
@@ -120,5 +155,6 @@ func SetupRoutes(app *App) *mux.Router {
 	router.HandleFunc("/", HealthCheckHandler).Methods("GET")
 	router.HandleFunc("/oauth/callback", OAuthCallbackHandler)
 	router.HandleFunc("/oauth/start", OAuthStartHandler).Methods("GET")
+	router.HandleFunc("/menu", GetMenuItemsHandler).Methods("GET")
 	return router
 }

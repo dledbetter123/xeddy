@@ -1,0 +1,6 @@
+framework module Pods_xeddy_iosUITests {
+  umbrella header "Pods-xeddy-iosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

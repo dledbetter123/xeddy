@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BF005B0B7774E3FC6692C0D /* Pods_xeddy_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889939F5FC603C3F8533054 /* Pods_xeddy_iosUITests.framework */; };
+		3F36741E7447355E7FAFF7A6 /* Pods_xeddy_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4E64C148A54D9A0984ED14 /* Pods_xeddy_iosTests.framework */; };
 		4A35447A2C88CE2500D1390A /* xeddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3544792C88CE2500D1390A /* xeddyApp.swift */; };
 		4A35447C2C88CE2500D1390A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35447B2C88CE2500D1390A /* ContentView.swift */; };
 		4A35447E2C88CE2600D1390A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A35447D2C88CE2600D1390A /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 		4A35448C2C88CE2600D1390A /* xeddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35448B2C88CE2600D1390A /* xeddyTests.swift */; };
 		4A3544962C88CE2700D1390A /* xeddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3544952C88CE2700D1390A /* xeddyUITests.swift */; };
 		4A3544982C88CE2700D1390A /* xeddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3544972C88CE2700D1390A /* xeddyUITestsLaunchTests.swift */; };
+		4A99AF0D2CD5021000D366E0 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99AF0C2CD5021000D366E0 /* AuthView.swift */; };
+		4A99AF0F2CD5043B00D366E0 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99AF0E2CD5043B00D366E0 /* MainAppView.swift */; };
 		4ABB72062C90A2BB00F4D0BE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB72052C90A2BB00F4D0BE /* HomeScreen.swift */; };
 		4ABB72082C90A2F800F4D0BE /* RestaurantDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB72072C90A2F800F4D0BE /* RestaurantDetailsScreen.swift */; };
 		4ABB720A2C90A45A00F4D0BE /* PointsOverviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB72092C90A45A00F4D0BE /* PointsOverviewScreen.swift */; };
@@ -25,10 +29,7 @@
 		4ABB72172C91273800F4D0BE /* burger.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB72152C91273800F4D0BE /* burger.jpeg */; };
 		4ABB72182C91273800F4D0BE /* pizza.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB72162C91273800F4D0BE /* pizza.jpeg */; };
 		4ADE6CBA2CA1F913004D7E49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE6CB92CA1F913004D7E49 /* GoogleService-Info.plist */; };
-		4ADE6CBD2CA1FACF004D7E49 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADE6CBC2CA1FACF004D7E49 /* FirebaseAnalytics */; };
-		4ADE6CBF2CA1FC16004D7E49 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADE6CBE2CA1FC16004D7E49 /* FirebaseAuth */; };
-		4ADE6CC12CA1FC16004D7E49 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADE6CC02CA1FC16004D7E49 /* FirebaseDatabase */; };
-		4ADE6CC32CA1FC16004D7E49 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADE6CC22CA1FC16004D7E49 /* FirebaseFirestore */; };
+		73ACE39598EC6A45969ED213 /* Pods_xeddy_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D69D39F4B1C055FF60AF18 /* Pods_xeddy_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		037E79743F813B80512BDBA5 /* Pods-xeddy-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xeddy-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-xeddy-iosUITests/Pods-xeddy-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		130A46CA3B5732FEFC4E90C1 /* Pods-xeddy-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xeddy-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-xeddy-iosUITests/Pods-xeddy-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3889939F5FC603C3F8533054 /* Pods_xeddy_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xeddy_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3544762C88CE2500D1390A /* xeddy-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xeddy-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3544792C88CE2500D1390A /* xeddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xeddyApp.swift; sourceTree = "<group>"; };
 		4A35447B2C88CE2500D1390A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		4A3544912C88CE2700D1390A /* xeddy-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xeddy-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3544952C88CE2700D1390A /* xeddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xeddyUITests.swift; sourceTree = "<group>"; };
 		4A3544972C88CE2700D1390A /* xeddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xeddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A99AF0C2CD5021000D366E0 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		4A99AF0E2CD5043B00D366E0 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
 		4ABB72052C90A2BB00F4D0BE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		4ABB72072C90A2F800F4D0BE /* RestaurantDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsScreen.swift; sourceTree = "<group>"; };
 		4ABB72092C90A45A00F4D0BE /* PointsOverviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsOverviewScreen.swift; sourceTree = "<group>"; };
@@ -71,17 +77,28 @@
 		4ABB72152C91273800F4D0BE /* burger.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burger.jpeg; sourceTree = "<group>"; };
 		4ABB72162C91273800F4D0BE /* pizza.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpeg; sourceTree = "<group>"; };
 		4ADE6CB92CA1F913004D7E49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F4E64C148A54D9A0984ED14 /* Pods_xeddy_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xeddy_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C6002E7733499F2ACEAEF3 /* Pods-xeddy-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xeddy-ios.debug.xcconfig"; path = "Target Support Files/Pods-xeddy-ios/Pods-xeddy-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		92DF170B86E3841BF3A1F3F9 /* Pods-xeddy-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xeddy-ios.release.xcconfig"; path = "Target Support Files/Pods-xeddy-ios/Pods-xeddy-ios.release.xcconfig"; sourceTree = "<group>"; };
+		C651B85902F028D3A6046C19 /* Pods-xeddy-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xeddy-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-xeddy-iosTests/Pods-xeddy-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E66823A9FC318AF13856ABA8 /* Pods-xeddy-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xeddy-iosTests.release.xcconfig"; path = "Target Support Files/Pods-xeddy-iosTests/Pods-xeddy-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8D69D39F4B1C055FF60AF18 /* Pods_xeddy_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xeddy_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4A19CA592CD827E400F437FE /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4A3544732C88CE2500D1390A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ADE6CC12CA1FC16004D7E49 /* FirebaseDatabase in Frameworks */,
-				4ADE6CC32CA1FC16004D7E49 /* FirebaseFirestore in Frameworks */,
-				4ADE6CBD2CA1FACF004D7E49 /* FirebaseAnalytics in Frameworks */,
-				4ADE6CBF2CA1FC16004D7E49 /* FirebaseAuth in Frameworks */,
+				73ACE39598EC6A45969ED213 /* Pods_xeddy_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F36741E7447355E7FAFF7A6 /* Pods_xeddy_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +114,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF005B0B7774E3FC6692C0D /* Pods_xeddy_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11FE0570413F4CEBC2D91478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8D69D39F4B1C055FF60AF18 /* Pods_xeddy_ios.framework */,
+				4F4E64C148A54D9A0984ED14 /* Pods_xeddy_iosTests.framework */,
+				3889939F5FC603C3F8533054 /* Pods_xeddy_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		284941CAA68A6880BA63486D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70C6002E7733499F2ACEAEF3 /* Pods-xeddy-ios.debug.xcconfig */,
+				92DF170B86E3841BF3A1F3F9 /* Pods-xeddy-ios.release.xcconfig */,
+				C651B85902F028D3A6046C19 /* Pods-xeddy-iosTests.debug.xcconfig */,
+				E66823A9FC318AF13856ABA8 /* Pods-xeddy-iosTests.release.xcconfig */,
+				037E79743F813B80512BDBA5 /* Pods-xeddy-iosUITests.debug.xcconfig */,
+				130A46CA3B5732FEFC4E90C1 /* Pods-xeddy-iosUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4A35446D2C88CE2500D1390A = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +151,8 @@
 				4A35448A2C88CE2600D1390A /* xeddyTests */,
 				4A3544942C88CE2700D1390A /* xeddyUITests */,
 				4A3544772C88CE2500D1390A /* Products */,
+				284941CAA68A6880BA63486D /* Pods */,
+				11FE0570413F4CEBC2D91478 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,7 +174,6 @@
 				4ABB72032C90A0A600F4D0BE /* Components */,
 				4ABB72022C90A0A600F4D0BE /* Models */,
 				4ABB72012C90A0A600F4D0BE /* Views */,
-				4A35447B2C88CE2500D1390A /* ContentView.swift */,
 				4A35447D2C88CE2600D1390A /* Assets.xcassets */,
 				4ABB72132C91272700F4D0BE /* sushi.jpg */,
 				4ABB72152C91273800F4D0BE /* burger.jpeg */,
@@ -138,6 +181,7 @@
 				4A35447F2C88CE2600D1390A /* xeddy.entitlements */,
 				4A3544802C88CE2600D1390A /* Preview Content */,
 				4ABB720B2C90A4D400F4D0BE /* Extensions.swift */,
+				4A19CA592CD827E400F437FE /* ViewModels */,
 			);
 			path = xeddy;
 			sourceTree = "<group>";
@@ -170,10 +214,13 @@
 		4ABB72012C90A0A600F4D0BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A35447B2C88CE2500D1390A /* ContentView.swift */,
+				4A99AF0E2CD5043B00D366E0 /* MainAppView.swift */,
 				4ABB72052C90A2BB00F4D0BE /* HomeScreen.swift */,
 				4ABB72072C90A2F800F4D0BE /* RestaurantDetailsScreen.swift */,
 				4ABB72092C90A45A00F4D0BE /* PointsOverviewScreen.swift */,
 				4ABB720D2C91216C00F4D0BE /* MenuView.swift */,
+				4A99AF0C2CD5021000D366E0 /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,21 +248,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A35449B2C88CE2700D1390A /* Build configuration list for PBXNativeTarget "xeddy-ios" */;
 			buildPhases = (
+				9B7F8D9DB78ED27C33FC4E18 /* [CP] Check Pods Manifest.lock */,
 				4A3544722C88CE2500D1390A /* Sources */,
 				4A3544732C88CE2500D1390A /* Frameworks */,
 				4A3544742C88CE2500D1390A /* Resources */,
+				2ECA96A476F0F4DE7CADF8C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "xeddy-ios";
-			packageProductDependencies = (
-				4ADE6CBC2CA1FACF004D7E49 /* FirebaseAnalytics */,
-				4ADE6CBE2CA1FC16004D7E49 /* FirebaseAuth */,
-				4ADE6CC02CA1FC16004D7E49 /* FirebaseDatabase */,
-				4ADE6CC22CA1FC16004D7E49 /* FirebaseFirestore */,
+			fileSystemSynchronizedGroups = (
+				4A19CA592CD827E400F437FE /* ViewModels */,
 			);
+			name = "xeddy-ios";
 			productName = xeddy;
 			productReference = 4A3544762C88CE2500D1390A /* xeddy-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A35449E2C88CE2700D1390A /* Build configuration list for PBXNativeTarget "xeddy-iosTests" */;
 			buildPhases = (
+				F3D3FE92A1559D38B093D258 /* [CP] Check Pods Manifest.lock */,
 				4A3544832C88CE2600D1390A /* Sources */,
 				4A3544842C88CE2600D1390A /* Frameworks */,
 				4A3544852C88CE2600D1390A /* Resources */,
@@ -242,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A3544A12C88CE2700D1390A /* Build configuration list for PBXNativeTarget "xeddy-iosUITests" */;
 			buildPhases = (
+				F48A00FAAB6BE4846A223041 /* [CP] Check Pods Manifest.lock */,
 				4A35448D2C88CE2700D1390A /* Sources */,
 				4A35448E2C88CE2700D1390A /* Frameworks */,
 				4A35448F2C88CE2700D1390A /* Resources */,
@@ -280,7 +328,6 @@
 				};
 			};
 			buildConfigurationList = 4A3544712C88CE2500D1390A /* Build configuration list for PBXProject "xeddy-ios" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -288,9 +335,7 @@
 				Base,
 			);
 			mainGroup = 4A35446D2C88CE2500D1390A;
-			packageReferences = (
-				4ADE6CBB2CA1FACF004D7E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 4A3544772C88CE2500D1390A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,6 +377,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2ECA96A476F0F4DE7CADF8C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-xeddy-ios/Pods-xeddy-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-xeddy-ios/Pods-xeddy-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xeddy-ios/Pods-xeddy-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B7F8D9DB78ED27C33FC4E18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xeddy-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D3FE92A1559D38B093D258 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xeddy-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F48A00FAAB6BE4846A223041 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xeddy-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A3544722C88CE2500D1390A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -342,7 +473,9 @@
 				4ABB72102C9122A600F4D0BE /* RestaurantCard.swift in Sources */,
 				4ABB720C2C90A4D400F4D0BE /* Extensions.swift in Sources */,
 				4A35447A2C88CE2500D1390A /* xeddyApp.swift in Sources */,
+				4A99AF0F2CD5043B00D366E0 /* MainAppView.swift in Sources */,
 				4ABB72062C90A2BB00F4D0BE /* HomeScreen.swift in Sources */,
+				4A99AF0D2CD5021000D366E0 /* AuthView.swift in Sources */,
 				4ABB720A2C90A45A00F4D0BE /* PointsOverviewScreen.swift in Sources */,
 				4ABB72082C90A2F800F4D0BE /* RestaurantDetailsScreen.swift in Sources */,
 				4ABB72122C91235200F4D0BE /* Restaurant.swift in Sources */,
@@ -419,7 +552,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -480,7 +613,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -498,6 +631,7 @@
 		};
 		4A35449C2C88CE2700D1390A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C6002E7733499F2ACEAEF3 /* Pods-xeddy-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,12 +657,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidled.xeddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,6 +673,7 @@
 		};
 		4A35449D2C88CE2700D1390A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92DF170B86E3841BF3A1F3F9 /* Pods-xeddy-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -562,12 +699,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidled.xeddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,6 +715,7 @@
 		};
 		4A35449F2C88CE2700D1390A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C651B85902F028D3A6046C19 /* Pods-xeddy-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +739,7 @@
 		};
 		4A3544A02C88CE2700D1390A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66823A9FC318AF13856ABA8 /* Pods-xeddy-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -622,6 +763,7 @@
 		};
 		4A3544A22C88CE2700D1390A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 037E79743F813B80512BDBA5 /* Pods-xeddy-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -644,6 +786,7 @@
 		};
 		4A3544A32C88CE2700D1390A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 130A46CA3B5732FEFC4E90C1 /* Pods-xeddy-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,40 +847,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4ADE6CBB2CA1FACF004D7E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4ADE6CBC2CA1FACF004D7E49 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4ADE6CBB2CA1FACF004D7E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		4ADE6CBE2CA1FC16004D7E49 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4ADE6CBB2CA1FACF004D7E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		4ADE6CC02CA1FC16004D7E49 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4ADE6CBB2CA1FACF004D7E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		4ADE6CC22CA1FC16004D7E49 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4ADE6CBB2CA1FACF004D7E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A35446E2C88CE2500D1390A /* Project object */;
 }

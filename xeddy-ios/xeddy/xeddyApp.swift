@@ -9,11 +9,13 @@ import SwiftUI
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
+    FirebaseConfiguration.shared.setLoggerLevel(.debug)
     return true
   }
 }
@@ -37,9 +39,8 @@ struct xeddyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainAppView()
         }
         .environment(\.colorScheme, .dark)
     }
 }
-

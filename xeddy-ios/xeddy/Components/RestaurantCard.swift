@@ -7,42 +7,58 @@
 
 import Foundation
 import SwiftUI
+import FirebaseStorage
+
+func fetchDownloadURL(merchantID: String, filename: String, completion: @escaping (URL?) -> Void) {
+    let storageRef = Storage.storage().reference().child("\(merchantID)/\(filename)")
+
+    storageRef.downloadURL { url, error in
+        if let error = error {
+            print("Error fetching download URL: \(error.localizedDescription)")
+            completion(nil)
+            return
+        }
+        
+        print("Fetched download URL: \(url?.absoluteString ?? "No URL")")
+        completion(url)
+    }
+}
 
 struct RestaurantCard: View {
     let restaurant: Restaurant
-    
+    @State private var imageURL: URL?
+
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(restaurant.image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 150)
-                .clipped()
-                .cornerRadius(10)
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(restaurant.name)
-                        .font(.headline)
-                    Text("\(restaurant.points) Points Available")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+        VStack {
+            // Display image once URL is available
+            if let imageURL = imageURL {
+                AsyncImage(url: imageURL) { image in
+                    image.resizable()
+                         .aspectRatio(contentMode: .fit)
+                         .frame(height: 200)
+                } placeholder: {
+                    ProgressView() // Shows a loading spinner while fetching
                 }
-                Spacer()
-                if restaurant.hasDeal {
-                    Text("Deal!")
-                        .font(.caption)
-                        .fontWeight(.bold)
-                        .padding(5)
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(5)
-                }
+            } else {
+                Rectangle()
+                    .fill(Color.gray)
+                    .frame(width: 100, height: 100) // Placeholder if no image is available
             }
+
+            Text(restaurant.name)
+                .font(.headline)
+
         }
-        .padding()
-        .background(Color.black.opacity(0.1))
-        .cornerRadius(10)
-        .shadow(radius: 5)
+        .onAppear {
+            loadImage()
+        }
+    }
+
+    private func loadImage() {
+        // Fetch the download URL dynamically based on merchantID and filename
+        fetchDownloadURL(merchantID: restaurant.merchantID, filename: "card_0.jpg") { url in
+            self.imageURL = url
+        }
     }
 }
+
