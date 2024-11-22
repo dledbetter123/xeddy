@@ -2,3 +2,6 @@ xeddy-backend/*.json
 xeddy-backend/go.sum
 xeddy-backend/internal/db/xeddy_firebase_credentials.json
 xeddy-backend/.env
+xeddy-ios/Pods/*
+xeddy-ios/xeddy-ios.xcworkspace/*
+xeddy-ios/xeddy-ios.xcodeproj/*
