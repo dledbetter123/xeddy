@@ -5,3 +5,4 @@ xeddy-backend/.env
 xeddy-ios/Pods/*
 xeddy-ios/xeddy-ios.xcworkspace/*
 xeddy-ios/xeddy-ios.xcodeproj/*
+xeddy-ios/xeddy/GoogleService-Info.plist
