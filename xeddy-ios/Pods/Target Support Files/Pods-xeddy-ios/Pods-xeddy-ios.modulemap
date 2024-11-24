@@ -1,6 +1,0 @@
-framework module Pods_xeddy_ios {
-  umbrella header "Pods-xeddy-ios-umbrella.h"
-
-  export *
-  module * { export * }
-}
